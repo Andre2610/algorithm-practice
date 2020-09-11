@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.componentWrapper {
+  top: 20vh;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  background-color: rgb(41, 41, 41);
+  color: #eee;
+}
+
+.inputText {
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 90vw;
+  margin: 25vh auto 5vh auto;
+  border-radius: 15px 3px 15px 3px;
+  outline: none;
+  transition: 0.3s;
+  &:focus {
+    transform: scale(1.05);
+    border-radius: 3px 15px 3px 15px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  justify-content: center;
+}
+
+.btn {
+  margin: 1rem auto;
+  width: 60vw;
+  font-size: 1rem;
+  font-weight: 700;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0.3vh 0.3vw 15px 0px rgb(134, 128, 128);
+  }
+}
+
+@media (min-width: 250px) {
+  .btn {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .componentWrapper {
+    font-size: 2rem;
+  }
+
+  .inputText {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 15vw;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .componentWrapper {
+    font-size: 2rem;
+  }
+
+  .inputText {
+    width: 70vw;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .menu {
+    width: 45vw;
+  }
+
+  .btn {
+    width: 10vw;
+  }
+}
