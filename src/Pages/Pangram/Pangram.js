@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../Components/Button/Button";
 import "./Pangram.scss";
 
 export default function Pangram() {
@@ -7,7 +8,8 @@ export default function Pangram() {
   const myRegex = /[a-z]/g;
 
   function onClickHandler(str) {
-    new Set(str.match(myRegex)).size >= 26
+    const lowerCaseStr = str.toLowerCase();
+    new Set(lowerCaseStr.match(myRegex)).size >= 26
       ? setIsPangram(true)
       : setIsPangram(false);
   }
@@ -21,12 +23,11 @@ export default function Pangram() {
       />
       <div className="menu">
         <label>Is your sentence a pangram?</label>
-        <button
-          className="btn"
-          onClick={() => onClickHandler(sentence.toLowerCase())}
-        >
-          Check it!
-        </button>
+        <Button
+          label="Check it"
+          onClickHandler={onClickHandler}
+          argument={sentence}
+        />
       </div>
       {isPangram ? (
         <div>
