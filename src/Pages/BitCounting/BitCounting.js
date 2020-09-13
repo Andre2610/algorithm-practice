@@ -17,6 +17,14 @@ export default function BitCounting() {
     }
   }
 
+  // other solution
+  // function numberToBin(num) {
+  //   const binaryNum = Math.abs(num).toString(2);
+  //   const bitCount = binaryNum.split("").filter((number) => number > 0).length;
+  //   setBinaryNum(binaryNum);
+  //   setBits(bitCount);
+  // }
+
   return (
     <div className="componentWrapper">
       <input
