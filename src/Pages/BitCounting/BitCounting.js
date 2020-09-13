@@ -3,11 +3,18 @@ import Button from "../../Components/Button/Button";
 
 export default function BitCounting() {
   const [number, setNumber] = useState(0);
+  const [binaryNum, setBinaryNum] = useState(0);
   const [bits, setBits] = useState(0);
 
   function numberToBin(num) {
     const positiveNum = Math.abs(num);
-    setBits(positiveNum.toString(2));
+    const toBinaryNum = positiveNum.toString(2);
+    setBinaryNum(toBinaryNum);
+    let count = 0;
+    for (let i = 0; i < binaryNum.length; i++) {
+      if (parseInt(binaryNum[i]) === 1) count += 1;
+      setBits(count);
+    }
   }
 
   return (
@@ -30,7 +37,9 @@ export default function BitCounting() {
       {bits ? (
         <div>
           <h2>{Math.abs(number)}</h2>
-          <h3>Is {bits} in binary!</h3>
+          <h3>
+            Is {binaryNum} in binary, which has {bits} 1's
+          </h3>
         </div>
       ) : null}
     </div>
