@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../../Components/Button/Button";
-import "./Pangram.scss";
 
 export default function Pangram() {
   const [sentence, setSentence] = useState("");
